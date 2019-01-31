@@ -1,3 +1,11 @@
+**常用命令或技巧**
+
+1. 删除远程库中不需要的文件:  首先删除本地库中的文件 git add --all    git commit -m "commit相关说明"   git push origin master    即可
+2. 删除远程库中不需要的分支:    git push origin --delete <name>
+   
+
+
+
 # 时光机穿梭
 1. 要随时掌握工作区的状态，使用git status命令。
 
