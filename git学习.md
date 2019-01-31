@@ -1,3 +1,11 @@
+**常用命令或技巧**
+
+1. 删除远程库中不需要的文件:  首先删除本地库中的文件 git add --all    git commit -m "commit相关说明"   git push origin master    即可
+2. 删除远程库中不需要的分支:    git push origin --delete <name>
+   
+
+
+
 # 时光机穿梭
 1. 要随时掌握工作区的状态，使用git status命令。
 
@@ -96,15 +104,15 @@ Git鼓励大量使用分支：
 
    - 查看分支：git branch
 
-   - 创建分支：git branch <name>
+   - 创建分支：git branch "name"
 
-   - 切换分支：git checkout <name>
+   - 切换分支：git checkout "name"
 
-   - 创建+切换分支：git checkout -b <name>
+   - 创建+切换分支：git checkout -b "name"
 
-   - 合并某分支到当前分支：git merge <name>
+   - 合并某分支到当前分支：git merge "name"
 
-   - 删除分支：**本地**git branch -d <name>   **远程** git push origin --delete <name>
+   - 删除分支：**本地**git branch -d "name"   **远程** git push origin --delete "name"
 
    - 博客里面画的分支图没太弄懂 
 
