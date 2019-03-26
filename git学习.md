@@ -38,7 +38,8 @@
   4. git add   git commit
   5. push代码提交merge_request
   git push origin staging-james --force（当远程没有ssd-james分支时，会提示你是否要提交merge request，merge到哪个分支）
-5.merge产生冲突时的解决：
+  
+  6.merge产生冲突时的解决：
     打开冲突文件，修改冲突部分，然后git commit,然后再merge
 
 # 安装git
