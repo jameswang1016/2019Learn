@@ -11,8 +11,8 @@
 2. 删除远程库中不需要的分支:    git push origin --delete <name>  
   
 3.在push之前merge错了,怎么办?比如你开发是拉的staging分支,但是你把dev分支merge进来了，push出错怎么办:
-
-  0.先复制你的修改,以便于在第4步时直接将修改复制进去
+ 
+  - 先复制你的修改,以便于在第4步时直接将修改复制进去
   然后如下操作:
   1. 拉staging分支
   git checkout -b staging origin/staging
@@ -28,7 +28,7 @@
 
 4.公司的开发流程：
   
-  0.git clone 
+  - 首先 git clone 把远程库复制下来
   1. 拉staging分支
   git checkout -b staging origin/staging
   git pull
@@ -37,11 +37,12 @@
   3. 修改代码
   4. git add   git commit
   5. push代码提交merge_request
-  git push origin staging-james --force（当远程没有ssd-james分支时，会提示你是否要提交merge request，merge到哪个分支）
-  
+  git push origin staging-james --force（当远程没有ssd-james分支时，会提示你是否要提交merge request，merge到哪个分支）  
   6.merge产生冲突时的解决：
     打开冲突文件，修改冲突部分，然后git commit,然后再merge
 
+5.其他常用的：
+  git diff（查看本地库与远程库的区别）     git status（查看状态信息）   git log（查看版本信息）    git branch -vv(查看本地库与远程库的关联)
 # 安装git
 1. sudo apt-get install git
 2. 安装完成后,需要设置你的名字与邮箱:
