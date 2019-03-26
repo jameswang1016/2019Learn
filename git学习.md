@@ -9,11 +9,10 @@
 
 1. 删除远程库中不需要的文件:  首先删除本地库中的文件:rm命令  然后添加到git: git add --all     然后使用:git commit -m "commit相关说明"   最后push到远程库:git push origin master    即可
 2. 删除远程库中不需要的分支:    git push origin --delete <name>  
-3.在push之前merge错了,怎么办?比如你开发是拉的staging分支,但是你把dev分支merge进来了.
-push出错怎么办:
+  
+3.在push之前merge错了,怎么办?比如你开发是拉的staging分支,但是你把dev分支merge进来了，push出错怎么办:
 
-  先复制你的修改,以便于在第4步时直接将修改复制进去
-
+  0.先复制你的修改,以便于在第4步时直接将修改复制进去
   然后如下操作:
   1. 拉staging分支
   git checkout -b staging origin/staging
