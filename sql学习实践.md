@@ -4,16 +4,16 @@ join与where的混合用法：
 sql = "select a.*, b.* from %s as a join %s as b on a.ro_id = b.ro_id where b.vx_id in [id1,id2,id3...]" % (TB_A, TB_B)
 
 
-"website"表:
-+----+--------------+---------------------------+-------+---------+
-| id | name         | url                       | alexa | country |
-+----+--------------+---------------------------+-------+---------+
-| 1  | Google       | https://www.google.cm/    | 1     | USA     |
-| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
-| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
-| 4  | 微博          | http://weibo.com/         | 20    | CN      |
-| 5  | Facebook     | https://www.facebook.com/ | 3     | USA     |
-+----+--------------+---------------------------+-------+---------+
+	"website"表:
+	+----+--------------+---------------------------+-------+---------+
+	| id | name         | url                       | alexa | country |
+	+----+--------------+---------------------------+-------+---------+
+	| 1  | Google       | https://www.google.cm/    | 1     | USA     |
+	| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
+	| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
+	| 4  | 微博          | http://weibo.com/         | 20    | CN      |
+	| 5  | Facebook     | https://www.facebook.com/ | 3     | USA     |
+	+----+--------------+---------------------------+-------+---------+
 
 - **select语句**:用于从数据库中选取数据。结果被存储在一个结果表中，称为结果集。
 语法为:从 "Websites" 表中选取特定列：SELECT column_name,column_name FROM table_name;
