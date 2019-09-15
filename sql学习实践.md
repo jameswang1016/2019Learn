@@ -164,3 +164,48 @@ ALTER TABLE Persons
 ALTER COLUMN DateOfBirth year
 
 
+- **SQL JOIN**
+
+SQL join 用于把来自两个或多个表的行结合起来
+
+SQL JOIN 子句用于把来自两个或多个表的行结合起来，基于这些表之间的共同字段。
+最常见的 JOIN 类型：SQL INNER JOIN（简单的 JOIN）。 SQL INNER JOIN 从多个表中返回满足 JOIN 条件的所有行
+
+
+两张表:
+
+	+----+--------------+---------------------------+-------+---------+
+	| id | name         | url                       | alexa | country |
+	+----+--------------+---------------------------+-------+---------+
+	| 1  | Google       | https://www.google.cm/    | 1     | USA     |
+	| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
+	| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
+	| 4  | 微博          | http://weibo.com/         | 20    | CN      |
+	| 5  | Facebook     | https://www.facebook.com/ | 3     | USA     |
+	| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
+	+----+---------------+---------------------------+-------+---------+
+
+
+	mysql> SELECT * FROM access_log;
+	+-----+---------+-------+------------+
+	| aid | site_id | count | date       |
+	+-----+---------+-------+------------+
+	|   1 |       1 |    45 | 2016-05-10 |
+	|   2 |       3 |   100 | 2016-05-13 |
+	|   3 |       1 |   230 | 2016-05-14 |
+	|   4 |       2 |    10 | 2016-05-14 |
+	|   5 |       5 |   205 | 2016-05-14 |
+	|   6 |       4 |    13 | 2016-05-15 |
+	|   7 |       3 |   220 | 2016-05-15 |
+	|   8 |       5 |   545 | 2016-05-16 |
+	|   9 |       3 |   201 | 2016-05-17 |
+	+-----+---------+-------+------------+
+	9 rows in set (0.00 sec)
+
+实例:SELECT Websites.id, Websites.name, access_log.count, access_log.date
+FROM Websites
+INNER JOIN access_log
+ON Websites.id=access_log.site_id;
+
+结果:
+https://www.runoob.com/wp-content/uploads/2013/09/join1.jpg
