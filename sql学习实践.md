@@ -254,3 +254,23 @@ ON table1.column_name=table2.column_name;
 注释：在某些数据库中，RIGHT JOIN 称为 RIGHT OUTER JOIN。
 
 SQL RIGHT JOIN
+
+
+
+# SQL 函数
+
+- **GROUP BY**
+
+SQL GROUP BY 语句
+GROUP BY 语句可结合一些聚合函数来使用
+
+
+GROUP BY 语句
+GROUP BY 语句用于结合聚合函数，根据一个或多个列对结果集进行分组。
+
+
+实例
+SELECT site_id, SUM(access_log.count) AS nums
+FROM access_log GROUP BY site_id;
+
+https://www.runoob.com/wp-content/uploads/2013/09/groupby1.jpg
