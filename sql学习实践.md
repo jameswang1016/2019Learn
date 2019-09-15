@@ -209,3 +209,48 @@ ON Websites.id=access_log.site_id;
 
 结果:
 https://www.runoob.com/wp-content/uploads/2013/09/join1.jpg
+
+
+- **inner join**
+同join:INNER JOIN 关键字在表中存在至少一个匹配时返回行。
+
+- **left join**
+
+SQL LEFT JOIN 关键字
+LEFT JOIN 关键字**从左表（table1）返回所有的行，**(即使右表（table2）中没有匹配。如果右表中没有匹配，则结果为 NULL。
+
+SQL LEFT JOIN 语法
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name=table2.column_name;
+或：
+
+SELECT column_name(s)
+FROM table1
+LEFT OUTER JOIN table2
+ON table1.column_name=table2.column_name;
+注释：在某些数据库中，LEFT JOIN 称为 LEFT OUTER JOIN。
+
+SQL LEFT JOIN
+
+
+- **right join**
+
+SQL RIGHT JOIN 关键字
+RIGHT JOIN 关键字从右表（table2）返回所有的行，即使左表（table1）中没有匹配。如果左表中没有匹配，则结果为 NULL。
+
+SQL RIGHT JOIN 语法
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name=table2.column_name;
+或：
+
+SELECT column_name(s)
+FROM table1
+RIGHT OUTER JOIN table2
+ON table1.column_name=table2.column_name;
+注释：在某些数据库中，RIGHT JOIN 称为 RIGHT OUTER JOIN。
+
+SQL RIGHT JOIN
